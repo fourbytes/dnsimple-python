@@ -101,7 +101,7 @@ class DNSimple(object):
                 'api_token': None,
                 'account_id': None,
             })
-            config = configparser.ConfigParser(defaults=defaults)
+            config = configparser.ConfigParser(defaults=defaults, allow_no_value=True)
             for cfg in ['.dnsimple', os.path.expanduser('~/.dnsimple')]:
                 if os.path.exists(cfg):
                     config.read(cfg)
